@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FitLite — 离线优先的 AI 健身助手</title>
+<meta name="description" content="FitLite 是一款本地优先的 AI 私人健身教练，所有数据保存在你的设备上，不上传任何服务器。" />
+<style>
+  :root {
+    --bg: #0f0f1a;
+    --card: #1a1a2e;
+    --text: #e8e8f0;
+    --muted: #888;
+    --accent: #ff6b35;
+    --border: #2a2a40;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    border-bottom: 1px solid var(--border);
+  }
+  nav .inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  nav .brand {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  nav .links {
+    display: flex;
+    gap: 20px;
+  }
+  nav .links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  nav .links a:hover { color: var(--accent); }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  .hero {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .hero h1 {
+    font-size: 40px;
+    margin: 0 0 16px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .hero .tagline {
+    font-size: 18px;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+  .feat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .feat h3 {
+    color: var(--accent);
+    font-size: 16px;
+    margin: 0 0 8px;
+  }
+  .feat p {
+    color: var(--text);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .principles {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 48px;
+  }
+  .principles h2 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 16px;
+  }
+  .principles ul {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .principles li {
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .principles li strong { color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="./" class="brand">FitLite</a>
+    <div class="links">
+      <a href="./privacy.html">隐私政策</a>
+      <a href="./support.html">支持</a>
+      <a href="./terms.html">使用条款</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero">
+  <div class="badge">iOS · 离线优先</div>
+  <h1>训练自己，不打扰别人</h1>
+  <p class="tagline">FitLite 是一款本地优先的 AI 健身教练。所有训练计划、训练记录都保存在你的设备上，不上传任何服务器。</p>
+</section>
+
+<section class="features">
+  <div class="feat">
+    <h3>AI 生成计划</h3>
+    <p>根据你的目标、水平、可用时长，自动排出 8 周训练。计划在你设备本地生成，不需要账号。</p>
+  </div>
+  <div class="feat">
+    <h3>真人动作演示</h3>
+    <p>每个动作都有真人示范图与中文要点说明，跟着做不踩坑。</p>
+  </div>
+  <div class="feat">
+    <h3>晨间 / 碎片 / 完整三种模式</h3>
+    <p>没空时也能 10 分钟激活一下，状态好时再上完整训练。</p>
+  </div>
+  <div class="feat">
+    <h3>饮食与体重追踪</h3>
+    <p>84 种食物的营养数据库 + BMR/TDEE 自动计算，营养目标更直观。</p>
+  </div>
+</section>
+
+<section class="principles">
+  <h2>我们怎么对待你的数据</h2>
+  <ul>
+    <li><strong>本地存储：</strong>训练记录、体重、饮食日志全部留在 iOS 应用沙盒里，不上云</li>
+    <li><strong>不收集个人信息：</strong>没有账号系统、没有邮箱采集、没有第三方分析 SDK</li>
+    <li><strong>AI 教练可关：</strong>使用 Gemini 时仅传你输入的对话文本，不附带身份信息；不配置 API Key 时由本地规则引擎兜底</li>
+    <li><strong>广告可订阅去除：</strong>免费版仅在训练间歇休息时展示横幅广告，订阅去广告档位即关闭</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <a href="./privacy.html">隐私政策</a>·
+  <a href="./support.html">支持</a>·
+  <a href="./terms.html">使用条款</a>
+  <p style="margin-top: 16px;">© 2026 FitLite</p>
+</footer>
+
+</body>
+</html>
