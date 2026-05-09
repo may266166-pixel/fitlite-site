@@ -120,7 +120,7 @@
 <main>
 
 <h1>FitLite 隐私政策</h1>
-<p class="meta">最后更新：2026 年 5 月 8 日</p>
+<p class="meta">最后更新：2026 年 5 月 10 日</p>
 
 <div class="card">
 <p>FitLite 是一款离线优先的健身应用。我们不收集你的任何个人数据，所有训练计划、训练记录、体测数据、饮食日志都仅保存在你的设备本地。下面这份政策列出了 App 涉及到的全部数据流向，帮助你判断风险。</p>
@@ -146,13 +146,13 @@
 <p>这些数据在你卸载 App 时一并删除。设置页面也提供"清除所有数据"按钮，可随时手动清空。</p>
 
 <h2>3. 教练对话（可选功能）</h2>
-<p>App 的「教练」标签使用 Google Gemini 服务生成回复。当且仅当你主动在该标签输入消息时：</p>
+<p>App 的「教练」标签优先使用 Google Gemini 服务生成回复，并按以下顺序降级：</p>
 <ul>
-  <li>你的输入文本会发送至 Google 的服务器以生成回复</li>
-  <li>不附带你的姓名、设备 ID、Apple ID 或任何其他个人标识</li>
-  <li>Google 对该 API 的数据处理政策：<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a></li>
-  <li>App 未配置对应密钥时，「教练」标签由本地规则引擎兜底，完全离线</li>
+  <li><strong>主路径</strong>：当应用配置了 Gemini API Key 且当前网络可用时，你的输入文本会发送至 Google 的服务器以生成回复。不附带姓名、设备 ID、Apple ID 或其他个人标识。Google 对该 API 的数据处理政策：<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a></li>
+  <li><strong>系统降级（iOS 26+）</strong>：当 Gemini 不可用时，App 会调用 Apple Intelligence 的 Foundation Models 框架，<strong>推理完全在你的设备上进行</strong>，输入与输出都不出设备。</li>
+  <li><strong>最终兜底</strong>：以上两层都不可用时，由设备本地的规则引擎根据关键词生成模板回复，完全离线。</li>
 </ul>
+<p>三层均不会上传你的训练记录、体重、饮食日志等本地数据。</p>
 
 <h2>4. 广告（仅免费版）</h2>
 <p>免费用户在训练间歇休息时会看到由 Google AdMob 提供的横幅广告。广告 SDK 的数据处理范围：</p>
@@ -186,13 +186,16 @@
 <h2>7. 通知</h2>
 <p>App 调度的训练提醒完全在设备本地通过 iOS 通知系统投递。FitLite 没有 push 服务器，不会向你发送营销通知。</p>
 
-<h2>8. 儿童隐私</h2>
+<h2>8. 应用更新检查</h2>
+<p>App 启动时（以及你在「设置 › 检查更新」主动触发时）会向 Apple 的官方端点 <code>itunes.apple.com/lookup</code> 发起一次 HTTPS 请求，仅传递本应用的 Bundle ID（<code>com.fitai.dw.app</code>），用于查询 App Store 当前发布的版本号。该请求不附带任何用户标识，对方也是 Apple 自家服务。</p>
+
+<h2>9. 儿童隐私</h2>
 <p>FitLite 不面向 13 岁以下儿童。我们不会有意收集儿童任何信息。如果你认为有儿童在未经监护人同意的情况下使用本应用，可联系我们删除其本地数据。</p>
 
-<h2>9. 政策变更</h2>
+<h2>10. 政策变更</h2>
 <p>本政策有更新时，最上方的"最后更新"日期会修改。重大变更（例如新增数据上传项）会在 App 内显著位置告知。</p>
 
-<h2>10. 联系方式</h2>
+<h2>11. 联系方式</h2>
 <p>关于隐私政策的任何疑问，请发邮件至 <a href="mailto:may266166@gmail.com">may266166@gmail.com</a>。</p>
 
 <hr />
