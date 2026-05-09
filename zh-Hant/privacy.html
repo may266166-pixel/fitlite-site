@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FitLite 隱私政策</title>
+<link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<nav><div class="inner"><a href="./" class="brand">FitLite</a>
+<div class="links"><a href="./privacy.html">隱私政策</a><a href="./support.html">支援</a><a href="./terms.html">使用條款</a><span id="lang-picker-slot"></span></div></div></nav>
+
+<main>
+<h1>FitLite 隱私政策</h1>
+<p class="meta">最後更新：2026 年 5 月 10 日</p>
+
+<div class="card"><p>FitLite 是一款離線優先的健身應用。我們不蒐集你的任何個人資料，所有訓練計畫、訓練紀錄、體測資料、飲食日誌都僅保存在你的裝置本地。下面這份政策列出了 App 涉及到的全部資料流向，幫助你判斷風險。</p></div>
+
+<h2>1. 我們不蒐集什麼</h2>
+<ul>
+  <li>不蒐集姓名、Email、手機號、Apple ID、地理位置、裝置唯一識別碼</li>
+  <li>不上傳訓練計畫、訓練紀錄、體重、飲食、習慣時間至任何伺服器</li>
+  <li>沒有使用者帳號系統，沒有雲端同步</li>
+  <li>不向第三方分析平台（友盟、神策、Firebase Analytics 等）發送任何事件</li>
+</ul>
+
+<h2>2. 裝置本地資料</h2>
+<p>FitLite 把以下資料寫入 iOS 系統的應用沙盒（AsyncStorage / SecureStore），僅你本人可存取：</p>
+<ul>
+  <li>個人檔案：性別、年齡、身高、體重、健身目標、健身水平</li>
+  <li>訓練計畫與訓練紀錄</li>
+  <li>每日飲水、飲食、肌肉痠痛日誌</li>
+  <li>本地通知排程（提醒訓練時間）</li>
+  <li>訂閱與打賞的本地快取（用於離線顯示，不含付款細節）</li>
+</ul>
+<p>這些資料在你刪除 App 時一併移除。設定頁面也提供「清除所有資料」按鈕，可隨時手動清空。</p>
+
+<h2>3. 教練對話（可選功能）</h2>
+<p>App 的「教練」標籤優先使用 Google Gemini 服務產生回覆，並按以下順序降級：</p>
+<ul>
+  <li><strong>主路徑</strong>：當應用配置了 Gemini API Key 且當前網路可用時，你的輸入文字會傳送至 Google 的伺服器以產生回覆。不附帶姓名、裝置 ID、Apple ID 或其他個人標識。Google 對該 API 的資料處理政策：<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a></li>
+  <li><strong>系統降級（iOS 26+）</strong>：當 Gemini 不可用時，App 會呼叫 Apple Intelligence 的 Foundation Models 框架，<strong>推論完全在你的裝置上進行</strong>，輸入與輸出都不出裝置。</li>
+  <li><strong>最終兜底</strong>：以上兩層都不可用時，由裝置本地的規則引擎根據關鍵字產生範本回覆，完全離線。</li>
+</ul>
+<p>三層均不會上傳你的訓練紀錄、體重、飲食日誌等本地資料。</p>
+
+<h2>4. 廣告（僅免費版）</h2>
+<p>免費使用者在訓練間歇休息時會看到由 Google AdMob 提供的橫幅廣告。廣告 SDK 的資料處理範圍：</p>
+<ul>
+  <li>僅在你於系統的「App 追蹤透明度」對話框選擇「允許追蹤」後，AdMob 才會讀取 IDFA 用於個人化廣告</li>
+  <li>選擇「要求 App 不追蹤」，App 自動改用<strong>非個人化廣告</strong>，不讀取 IDFA</li>
+  <li>SKAdNetwork（Apple 提供的隱私安全歸因機制）會傳送一次性的安裝/轉換報告，不含個人資訊</li>
+  <li>AdMob 資料處理政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+</ul>
+<p>訂閱「去廣告」檔位即關閉全部廣告 SDK 呼叫。</p>
+
+<h2>5. 應用內購買</h2>
+<p>所有打賞與訂閱均透過 Apple 的 App Store 內購系統完成。FitLite 不接觸你的付款資訊，僅從 Apple 接收「是否擁有有效訂閱 / 是否完成某次打賞」這一布林訊號，並將狀態保存在本地。</p>
+<ul>
+  <li>訂閱會自動續訂，到期前 24 小時按目前價格扣費</li>
+  <li>可在 設定 › Apple ID › 訂閱 中隨時取消，下個週期不再扣費</li>
+  <li>退款由 Apple 受理：<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></li>
+</ul>
+
+<h2>6. 健康資料（可選功能）</h2>
+<p>「今日消耗」卡片可選地從 iOS 健康 App 讀取你今天的步數，用於估算步行能量消耗。</p>
+<ul>
+  <li>僅在你點擊「從健康 App 同步」按鈕並在系統對話框中授予存取權限後，App 才會讀取步數</li>
+  <li>讀取範圍限於<strong>當日步數</strong>，不讀取其他健康分類（心率、睡眠、體重等）</li>
+  <li>FitLite 不寫入任何健康資料，也不上傳讀取到的步數至任何伺服器</li>
+  <li>讀取到的步數僅保存在裝置本地</li>
+  <li>不使用此功能時手動輸入步數也可，App 不需要健康權限即可正常執行</li>
+</ul>
+
+<h2>7. 通知</h2>
+<p>App 排程的訓練提醒完全在裝置本地透過 iOS 通知系統投遞。FitLite 沒有 push 伺服器，不會向你發送行銷通知。</p>
+
+<h2>8. 應用更新檢查</h2>
+<p>App 啟動時（以及你在「設定 › 檢查更新」主動觸發時）會向 Apple 的官方端點 <code>itunes.apple.com/lookup</code> 發起一次 HTTPS 請求，僅傳遞本應用的 Bundle ID（<code>com.fitai.dw.app</code>），用於查詢 App Store 目前發布的版本號。該請求不附帶任何使用者標識，對方也是 Apple 自家服務。</p>
+
+<h2>9. 兒童隱私</h2>
+<p>FitLite 不面向 13 歲以下兒童。我們不會有意蒐集兒童任何資訊。如果你認為有兒童在未經監護人同意的情況下使用本應用，可聯絡我們刪除其本地資料。</p>
+
+<h2>10. 政策變更</h2>
+<p>本政策有更新時，最上方的「最後更新」日期會修改。重大變更（例如新增資料上傳項）會在 App 內顯著位置告知。</p>
+
+<h2>11. 聯絡方式</h2>
+<p>關於隱私政策的任何疑問，請發信至 <a href="mailto:may266166@gmail.com">may266166@gmail.com</a>。</p>
+
+<hr />
+<footer><p>FitLite · 一款公益向的健身工具</p></footer>
+</main>
+
+<script src="../assets/lang.js"></script>
+</body>
+</html>

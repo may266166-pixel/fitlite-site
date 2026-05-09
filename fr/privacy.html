@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Politique de confidentialité de FitLite</title>
+<link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<nav><div class="inner"><a href="./" class="brand">FitLite</a>
+<div class="links"><a href="./privacy.html">Confidentialité</a><a href="./support.html">Support</a><a href="./terms.html">Conditions</a><span id="lang-picker-slot"></span></div></div></nav>
+
+<main>
+<h1>Politique de confidentialité de FitLite</h1>
+<p class="meta">Dernière mise à jour : 10 mai 2026</p>
+
+<div class="card"><p>FitLite est une app fitness hors-ligne d'abord. Nous ne collectons pas tes données personnelles. Plan, historique, données corporelles et journal alimentaire vivent uniquement sur ton appareil. Cette politique liste tous les flux de données pour t'aider à juger le risque.</p></div>
+
+<h2>1. Ce que nous ne collectons pas</h2>
+<ul>
+  <li>Pas de nom, email, téléphone, Apple ID, localisation ni identifiant unique d'appareil</li>
+  <li>Pas d'envoi de plan, journaux, poids, alimentation ou heures habituelles vers un serveur</li>
+  <li>Pas de système de comptes, pas de synchronisation cloud</li>
+  <li>Pas d'événements vers plateformes d'analytics tierces (Firebase Analytics, etc.)</li>
+</ul>
+
+<h2>2. Données sur l'appareil</h2>
+<p>FitLite écrit ce qui suit dans le sandbox iOS (AsyncStorage / SecureStore), accessible à toi seul :</p>
+<ul>
+  <li>Profil : sexe, âge, taille, poids, objectifs, niveau</li>
+  <li>Plan d'entraînement et journaux</li>
+  <li>Logs quotidiens d'eau, repas, courbatures</li>
+  <li>Rappels planifiés localement</li>
+  <li>Cache local du statut d'abonnement/pourboire (sans détails de paiement)</li>
+</ul>
+<p>Ces données sont effacées à la suppression de l'app. Réglages › « Effacer toutes les données » nettoie aussi manuellement.</p>
+
+<h2>3. Chat coach (optionnel)</h2>
+<p>L'onglet Coach utilise Google Gemini en priorité, puis dégrade :</p>
+<ul>
+  <li><strong>Principal</strong> : avec une clé Gemini configurée à la build et un réseau disponible, ton texte est envoyé aux serveurs Google pour générer une réponse. Sans nom, ID d'appareil ou Apple ID. Politique Google : <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a></li>
+  <li><strong>Système (iOS 26+)</strong> : si Gemini est indisponible, l'app appelle le framework Foundation Models d'Apple Intelligence. <strong>Inférence entièrement sur l'appareil</strong> ; entrée et sortie ne quittent pas l'iPhone.</li>
+  <li><strong>Final</strong> : si les deux couches échouent, un moteur local basé sur règles génère une réponse modèle. Totalement hors-ligne.</li>
+</ul>
+<p>Aucune des trois couches ne téléverse tes journaux, poids ou repas.</p>
+
+<h2>4. Publicité (version gratuite uniquement)</h2>
+<p>Les utilisateurs gratuits voient des bannières Google AdMob pendant les pauses. Portée du SDK :</p>
+<ul>
+  <li>AdMob lit l'IDFA pour personnaliser uniquement si tu choisis « Autoriser le suivi » dans la boîte ATT iOS</li>
+  <li>Si tu choisis « Demander à l'App de ne pas suivre », les <strong>pubs non personnalisées</strong> sont utilisées et l'IDFA n'est pas lu</li>
+  <li>SKAdNetwork (attribution préservant la vie privée d'Apple) envoie un rapport unique d'installation/conversion sans données personnelles</li>
+  <li>Politique AdMob : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+</ul>
+<p>L'abonnement « Sans pub » désactive tous les appels au SDK pub.</p>
+
+<h2>5. Achats dans l'app</h2>
+<p>Tous les pourboires et abonnements passent par l'IAP App Store d'Apple. FitLite ne touche pas tes données de paiement — nous recevons d'Apple uniquement un signal booléen « possède un abonnement actif / pourboire complété » et le stockons localement.</p>
+<ul>
+  <li>Les abonnements se renouvellent automatiquement 24h avant la fin de la période</li>
+  <li>Annule dans Réglages › Apple ID › Abonnements</li>
+  <li>Remboursements : Apple via <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></li>
+</ul>
+
+<h2>6. Données de santé (optionnelles)</h2>
+<p>La carte « Dépense du jour » peut lire les pas du jour depuis l'app Santé pour estimer la dépense de marche.</p>
+<ul>
+  <li>Les pas ne sont lus qu'après avoir touché « Synchroniser avec Santé » et accordé la permission système</li>
+  <li>Lecture limitée aux <strong>pas du jour</strong>. Autres catégories (rythme cardiaque, sommeil, poids) non accédées</li>
+  <li>FitLite n'écrit pas dans Santé et n'envoie pas les pas à un serveur</li>
+  <li>Pas conservés dans le même sandbox que les journaux</li>
+  <li>Sans cette fonction, la saisie manuelle suffit. Permission Santé non requise pour fonctionner</li>
+</ul>
+
+<h2>7. Notifications</h2>
+<p>Les rappels d'entraînement sont planifiés et délivrés entièrement sur l'appareil via le système de notifications iOS. FitLite n'a pas de serveur push et n'envoie aucune notification marketing.</p>
+
+<h2>8. Vérification des mises à jour</h2>
+<p>Au lancement (et quand tu touches « Vérifier les mises à jour » dans Réglages), l'app fait une requête HTTPS au point de terminaison officiel <code>itunes.apple.com/lookup</code>, transmettant uniquement le Bundle ID (<code>com.fitai.dw.app</code>) pour interroger la version publiée. Aucun identifiant d'utilisateur ; le destinataire est un service Apple.</p>
+
+<h2>9. Vie privée des enfants</h2>
+<p>FitLite n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données d'enfants. Si tu penses qu'un enfant l'utilise sans le consentement d'un tuteur, contacte-nous pour supprimer ses données locales.</p>
+
+<h2>10. Modifications de la politique</h2>
+<p>Lors d'une mise à jour de cette politique, la date « Dernière mise à jour » change. Les changements significatifs (ex. nouvelles données envoyées) sont aussi signalés dans l'app.</p>
+
+<h2>11. Contact</h2>
+<p>Pour des questions sur la confidentialité : <a href="mailto:may266166@gmail.com">may266166@gmail.com</a>.</p>
+
+<hr />
+<footer><p>FitLite · Un outil fitness paisible</p></footer>
+</main>
+
+<script src="../assets/lang.js"></script>
+</body>
+</html>

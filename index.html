@@ -1,146 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FitLite — 离线优先的健身助手</title>
-<meta name="description" content="FitLite 是一款本地优先的私人健身助手，所有数据保存在你的设备上，不上传任何服务器。" />
-<style>
-  :root {
-    --bg: #0f0f1a;
-    --card: #1a1a2e;
-    --text: #e8e8f0;
-    --muted: #888;
-    --accent: #ff6b35;
-    --border: #2a2a40;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  nav {
-    border-bottom: 1px solid var(--border);
-  }
-  nav .inner {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  nav .brand {
-    color: #fff;
-    font-weight: 800;
-    font-size: 18px;
-    text-decoration: none;
-  }
-  nav .links {
-    display: flex;
-    gap: 20px;
-  }
-  nav .links a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 14px;
-  }
-  nav .links a:hover { color: var(--accent); }
-
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 24px 80px;
-  }
-  .hero {
-    text-align: center;
-    margin-bottom: 64px;
-  }
-  .hero h1 {
-    font-size: 40px;
-    margin: 0 0 16px;
-    color: #fff;
-    font-weight: 900;
-  }
-  .hero .tagline {
-    font-size: 18px;
-    color: var(--muted);
-    margin: 0 0 32px;
-  }
-  .badge {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    padding: 4px 12px;
-    border-radius: 14px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-  }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-bottom: 56px;
-  }
-  .feat {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 20px;
-  }
-  .feat h3 {
-    color: var(--accent);
-    font-size: 16px;
-    margin: 0 0 8px;
-  }
-  .feat p {
-    color: var(--text);
-    font-size: 14px;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  .principles {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 28px;
-    margin-bottom: 48px;
-  }
-  .principles h2 {
-    color: #fff;
-    font-size: 20px;
-    margin: 0 0 16px;
-  }
-  .principles ul {
-    margin: 0;
-    padding-left: 22px;
-  }
-  .principles li {
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .principles li strong { color: var(--accent); }
-
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 24px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-  }
-  footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
-  footer a:hover { color: var(--accent); }
-</style>
+<title>FitLite — 离线优先的健身教练</title>
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
@@ -151,11 +15,10 @@
       <a href="./privacy.html">隐私政策</a>
       <a href="./support.html">支持</a>
       <a href="./terms.html">使用条款</a>
+      <span id="lang-picker-slot"></span>
     </div>
   </div>
 </nav>
-
-<main>
 
 <section class="hero">
   <div class="badge">iOS · 离线优先</div>
@@ -191,14 +54,11 @@
   </ul>
 </section>
 
-</main>
-
 <footer>
-  <a href="./privacy.html">隐私政策</a>·
-  <a href="./support.html">支持</a>·
-  <a href="./terms.html">使用条款</a>
+  <a href="./privacy.html">隐私政策</a> · <a href="./support.html">支持</a> · <a href="./terms.html">使用条款</a>
   <p style="margin-top: 16px;">© 2026 FitLite</p>
 </footer>
 
+<script src="assets/lang.js"></script>
 </body>
 </html>

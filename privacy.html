@@ -1,108 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>FitLite 隐私政策</title>
-<style>
-  :root {
-    --bg: #0f0f1a;
-    --card: #1a1a2e;
-    --text: #e8e8f0;
-    --muted: #888;
-    --accent: #ff6b35;
-    --border: #2a2a40;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  nav { border-bottom: 1px solid var(--border); }
-  nav .inner {
-    max-width: 960px; margin: 0 auto;
-    padding: 16px 24px;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 16px;
-  }
-  nav .brand { color: #fff; font-weight: 800; font-size: 18px; text-decoration: none; }
-  nav .links { display: flex; gap: 20px; }
-  nav .links a { color: var(--muted); text-decoration: none; font-size: 14px; }
-  nav .links a:hover { color: var(--accent); }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
-  h1 {
-    font-size: 28px;
-    margin: 0 0 8px;
-    color: #fff;
-  }
-  h2 {
-    font-size: 18px;
-    margin: 36px 0 12px;
-    color: var(--accent);
-  }
-  .meta {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 32px;
-  }
-  p, li {
-    color: var(--text);
-    font-size: 15px;
-  }
-  ul {
-    padding-left: 22px;
-  }
-  li {
-    margin-bottom: 6px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 20px 24px;
-    margin: 16px 0 24px;
-  }
-  .card p:first-child { margin-top: 0; }
-  .card p:last-child { margin-bottom: 0; }
-  code {
-    background: #12121f;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 13px;
-  }
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  a:hover { text-decoration: underline; }
-  hr {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 32px 0;
-  }
-  footer {
-    color: var(--muted);
-    font-size: 13px;
-    text-align: center;
-    margin-top: 48px;
-  }
-  .en {
-    color: var(--muted);
-    font-size: 14px;
-    border-left: 2px solid var(--border);
-    padding-left: 16px;
-    margin: 8px 0 16px;
-  }
-</style>
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
@@ -113,6 +15,7 @@
       <a href="./privacy.html">隐私政策</a>
       <a href="./support.html">支持</a>
       <a href="./terms.html">使用条款</a>
+      <span id="lang-picker-slot"></span>
     </div>
   </div>
 </nav>
@@ -205,5 +108,7 @@
 </footer>
 
 </main>
+
+<script src="assets/lang.js"></script>
 </body>
 </html>
